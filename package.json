@@ -1,0 +1,13 @@
+{
+  "name": "dala-fineract-setup",
+  "version": "0.0.0",
+  "description": "Dala Fineract Servers",
+  "main": "index.js",
+  "scripts": {
+  },
+  "author": "jmaleonard",
+  "license": "ISC",
+  "dependencies": {
+    "cfn-create-or-update": "^1.2.0"
+  }
+}
