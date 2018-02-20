@@ -7,6 +7,9 @@ Or
 
 Setup up your own custom command in your package.json scripts section
 
+```json 
 "deploy-wala-dala": "sh deploy/create-or-update-storage-stack.sh <aws-profile-name> <stack-name> <aws-region> <aurora-cluster-username> <aurora-cluster-password> <dala-infrastructure-stack-name>"
 
 "deploy-wala-dala": "sh deploy/create-or-update-server-stack.sh <aws-profile-name> <stack-name> <aws-region> <aurora-cluster-username> <aurora-cluster-password> <dala-infrastructure-stack-name> <key-pair-name> <storage-stack-name>"
+
+```
