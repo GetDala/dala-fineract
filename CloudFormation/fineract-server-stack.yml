@@ -20,6 +20,9 @@ Parameters:
   DalaInfrastructureStackName:
     Type: String
     Description: The stackname of the dala infrastructure stack
+  SSLCertificateARN:
+    Type: String 
+    Description: SSL certificate arn for the fineract stack
 
 Resources:
   FineractElbSecurityGroup:
@@ -51,8 +54,10 @@ Resources:
       Listeners:
         - InstancePort: '8443'
           InstanceProtocol: HTTP
-          LoadBalancerPort: '80'
-          Protocol: HTTP
+          LoadBalancerPort: '443'
+          Protocol: HTTPS
+          SSLCertificateId:
+            Ref: SSLCertificateARN
       Scheme: internal
       Subnets:
         - 'Fn::ImportValue': 

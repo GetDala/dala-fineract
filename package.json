@@ -1,9 +1,10 @@
 {
-  "name": "dala-fineract-setup",
+  "name": "dala-fineract-servers",
   "version": "0.0.0",
   "description": "Dala Fineract Servers",
   "main": "index.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
   },
   "author": "jmaleonard",
   "license": "ISC",

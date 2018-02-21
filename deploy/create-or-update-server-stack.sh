@@ -53,6 +53,13 @@ else
 	StorageStackName="${8}"
 fi
 
+if [ -z ${9} ]; then
+	echo "SSLCertificateARN is not set, please enter Storage Stack Name "
+	read -p 'SSLCertificateARN:' SSLCertificateARN
+else
+	SSLCertificateARN="${9}"
+fi
+
 echo "aws-profile is set to :" $awsprofile
 echo "stack-name is set to :" $stackname
 echo "region is set to :" $region
@@ -69,6 +76,7 @@ node_modules/cfn-create-or-update/cli.js --profile "${awsprofile}" --region "${r
 	ParameterKey=DalaInfrastructureStackName,ParameterValue="${DalaInfrastructureStackName}" \
     ParameterKey=KeyPair,ParameterValue="${KeyPair}" \
 	ParameterKey=StorageStack,ParameterValue="${StorageStackName}" \
+    ParameterKey=SSLCertificateARN,ParameterValue="${SSLCertificateARN}" \
 	--capabilities CAPABILITY_IAM \
 	--wait
 
